@@ -30,3 +30,13 @@ SELECT
     MAX(rental_rate) AS expensive_rental_rate
 FROM film
 GROUP BY replacement_cost;
+
+-- Find customers who have rented fewer than 15 times
+-- Group rentals by customer, then count each customer's rentals
+
+SELECT 
+    customer_id,
+    COUNT(rental_id) AS total_rentals
+FROM rental
+GROUP BY customer_id
+HAVING COUNT(*) < 15;
