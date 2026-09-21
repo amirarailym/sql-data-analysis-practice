@@ -102,4 +102,16 @@ SELECT
     AVG(replacement_cost) AS average_replacement_cost
 FROM film;
 
+-- QUESTION 7
+-- Payment Processing Analysis
+-- Analyze payment transactions to determine the average
+-- payment amount and the maximum payment processed.
+-- This information can support payment monitoring and
+-- processing restrictions intended to reduce fraud risk.
+
+SELECT
+    AVG(amount) AS average_payment,
+    MAX(amount) AS maximum_payment
+FROM payment;
+
 
