@@ -90,3 +90,16 @@ SELECT
     COUNT(DISTINCT category_id) AS unique_categories
 FROM film_category;
 
+-- QUESTION 6
+-- Film Replacement Costs
+-- Analyze the replacement costs of the films in the database.
+-- Find the minimum replacement cost, maximum replacement cost,
+-- and average replacement cost across all films.
+
+SELECT
+    MIN(replacement_cost) AS minimum_replacement_cost,
+    MAX(replacement_cost) AS maximum_replacement_cost,
+    AVG(replacement_cost) AS average_replacement_cost
+FROM film;
+
+
