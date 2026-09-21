@@ -115,3 +115,17 @@ SELECT
 FROM payment;
 
 
+-- QUESTION 8
+-- Customer Rental Activity
+-- Analyze customer rental activity by counting the total
+-- number of rentals made by each customer.
+-- Sort customers from highest to lowest rental volume.
+
+SELECT
+    customer_id,
+    COUNT(rental_id) AS count_of_rental_alltime
+FROM rental
+GROUP BY customer_id
+ORDER BY count_of_rental_alltime DESC;
+
+-- ---END----
